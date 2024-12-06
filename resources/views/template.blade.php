@@ -54,10 +54,10 @@
     <section id="hero" class="bg-white dark:bg-gray-900">
         <div class="grid max-w-screen-xl h-[700px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white ">
-                    Sistem Pakar
-                    <span class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl bg-gradient-to-r from-blue-500 via-blue-300 to-blue-700 text-transparent bg-clip-text bg-size-200">Rekomendasi Latihan Pemula</span>
+                <h1 class="max-w-[370px] mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden whitespace-nowrap border-r-4 border-black animate-typing">
+                    reiza jelek
                 </h1>
+                <span class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl bg-gradient-to-r from-blue-500 via-blue-300 to-blue-700 text-transparent bg-clip-text bg-size-200">Rekomendasi Latihan Pemula</span>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"> Sistem ini mengumpulkan informasi tentang kondisi fisik pengguna, tujuan kebugaran, dan preferensi latihan mereka, kemudian memberikan saran latihan yang mudah diikuti, efektif, dan aman. </p>
                 <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                     Ayo Mulai
@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+                <img src="{{ asset('image') }}/images.png" alt="banner">
             </div>
         </div>
     </section>

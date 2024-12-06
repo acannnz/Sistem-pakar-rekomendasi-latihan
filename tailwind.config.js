@@ -11,6 +11,25 @@ export default {
     ],
     theme: {
         extend: {
+            keyframes: {
+                typing: {
+                    '0%, 100%': { width: '0%', left: '0' },
+                    '50%': { width: '100%', left: '0' },
+                    '75%': { width: '100%', left: '100%' },
+                    '100%': { width: '0%', left: '100%' }
+                    },
+                cursor: {
+                    '0%, 100%': { borderColor: 'transparent' },
+                    '50%': { borderColor: 'blue' }
+                },
+                phraseRotation: {
+                    '0%, 45%': { content: '"Sistem Pakar"' },
+                    '55%, 100%': { content: '"Expert System"' }
+                },
+            },
+            animation: {
+                typing: 'typing 4s steps(30, end) infinite, cursor 0.7s step-end infinite alternate, phraseRotation 8s linear infinite'
+                },
             colors: {
                 primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
             },
