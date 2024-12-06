@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekomendasi Latihan</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://db.onlinewebfonts.com/c/32416a86c048d1723d84ab514fc50a1c?family=Punch" rel="stylesheet" type="text/css" />
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -16,8 +17,8 @@
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="" class="h-8" alt="Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MCPE</span>
+                    <img src="{{asset('image')}}/logo.png" class="h-12 w-12" alt="Logo" />
+                    <span class="self-center text-4xl whitespace-nowrap font-punch dark:text-yellow-100">OTW SAITAMA</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -55,7 +56,7 @@
         <div class="grid max-w-screen-xl h-[700px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 class="max-w-[370px] mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden whitespace-nowrap border-r-4 border-black animate-typing">
-                    reiza jelek
+                    Sistem Pakar
                 </h1>
                 <span class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl bg-gradient-to-r from-blue-500 via-blue-300 to-blue-700 text-transparent bg-clip-text bg-size-200">Rekomendasi Latihan Pemula</span>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"> Sistem ini mengumpulkan informasi tentang kondisi fisik pengguna, tujuan kebugaran, dan preferensi latihan mereka, kemudian memberikan saran latihan yang mudah diikuti, efektif, dan aman. </p>
@@ -66,8 +67,8 @@
                     </svg>
                 </a>
             </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="{{ asset('image') }}/images.png" alt="banner">
+            <div class="w-[400px] h-[400px] ml-28 lg:mt-0 lg:col-span-5">
+                <img class="drop-shadow-kuning rounded-lg animate-mantul" src="{{ asset('image') }}/saitama.png" alt="banner">
             </div>
         </div>
     </section>
