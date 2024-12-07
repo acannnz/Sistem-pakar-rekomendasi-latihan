@@ -82,7 +82,7 @@
                 <p class="text-gray-500 sm:text-xl dark:text-gray-400">Sistem Pakar Rekomendasi Latihan Pemula menawarkan berbagai manfaat penting yang membantu pemula memulai perjalanan kebugaran mereka dengan aman dan efektif.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div>
+                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
@@ -91,7 +91,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Tujuan Utama</h3>
                     <p class="text-gray-500 dark:text-gray-400"> Sistem Pakar Rekomendasi Latihan Pemula dirancang untuk membantu pemula memulai perjalanan kebugaran dengan latihan yang aman dan efektif, disesuaikan dengan kebutuhan individu.</p>
                 </div>
-                <div>
+                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
@@ -100,7 +100,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Personalisasi Latihan</h3>
                     <p class="text-gray-500 dark:text-gray-400">Sistem ini menganalisis data pengguna untuk memberikan rekomendasi latihan yang disesuaikan berdasarkan usia, kondisi fisik, dan tujuan kebugaran, memastikan hasil yang optimal.</p>
                 </div>
-                <div>
+                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" clip-rule="evenodd"></path>
@@ -109,7 +109,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Pendekatan Bertahap</h3>
                     <p class="text-gray-500 dark:text-gray-400">Latihan yang disarankan dimulai dengan tingkat dasar dan secara bertahap meningkat, memberikan progres yang aman dan terukur bagi pemula, serta mengurangi risiko cedera.</p>
                 </div>
-                <div>
+                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"></path>
@@ -118,7 +118,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Aksesibilitas dan Kemudahan</h3>
                     <p class="text-gray-500 dark:text-gray-400">Sistem ini memberikan antarmuka yang ramah pengguna, memudahkan akses ke latihan yang dilengkapi dengan instruksi langkah demi langkah dan video tutorial yang memudahkan pemula.</p>
                 </div>
-                <div>
+                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd"></path>
@@ -127,7 +127,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Keamanan dan Efektivitas</h3>
                     <p class="text-gray-500 dark:text-gray-400">Sistem Pakar memastikan latihan yang disarankan sesuai dengan kemampuan fisik pemula, dengan fokus pada latihan yang aman, efektif, dan minim risiko cedera.</p>
                 </div>
-                <div>
+                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-8 h-8 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clip-rule="evenodd" />
@@ -143,7 +143,7 @@
     <!-- end About -->
 
     <!-- Team -->
-    <section class="bg-white dark:bg-gray-900 ">
+    <section id="team" class="bg-white dark:bg-gray-900 ">
         <div class="flex justify-center items-center w-full h-full">
             <h1 class="text-white mt-7 font-bold text-5xl">Team</h1>
         </div>
