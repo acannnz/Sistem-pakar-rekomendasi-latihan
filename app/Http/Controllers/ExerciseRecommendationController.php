@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\latihan;
 use Illuminate\Http\Request;
 
 class ExerciseRecommendationController extends Controller
 {
+    public function index()
+    {
+        $selectedExercises = [];
+        return view('index', compact('selectedExercises'));
+    }
+
     public function submitRecommendation(Request $request)
     {
-        // Validasi data input
         $data = $request->validate([
             'umur' => 'required|numeric|min:10|max:80',
             'tingkat_kebugaran' => 'required',
@@ -16,32 +22,10 @@ class ExerciseRecommendationController extends Controller
             'jenis_kelamin' => 'required',
             'waktu_latihan' => 'required'
         ]);
-
-        $latihan = [
-            'push up',
-            'sit up',
-            'squad',
-            'lunges',
-            'climber',
-            'kardio',
-            'tricep dips',
-            'tricep ekstension',
-            'plank',
-            'leg raises',
-            'Mountain Climbers',
-            'Burpees',
-            'Jump Squats',
-            'Wall Sit',
-            'Russian Twist',
-            'Superman Exercise',
-            'Bird Dog',
-            'High Knees',
-            'Diamond Push-ups'
-        ];
+        $latihan = Latihan::all()->pluck('jenis')->toArray();
 
         $selectedExercises = [];
 
-        // Pemilihan berdasarkan tujuan latihan
         switch ($data['tujuan_latihan']) {
             case 'massaOtot':
                 $selectedExercises = [
@@ -77,7 +61,6 @@ class ExerciseRecommendationController extends Controller
                 $selectedExercises = $latihan;
         }
 
-        // Filter berdasarkan umur
         $umur = intval($data['umur']);
         if ($umur < 25) {
             $selectedExercises = array_merge($selectedExercises, ['Burpees', 'Jump Squats']);
@@ -98,24 +81,17 @@ class ExerciseRecommendationController extends Controller
             case 'sedangKebugaran':
                 $selectedExercises = array_slice($selectedExercises, 0, 5);
                 break;
-
             case 'baikKebugaran':
-                // Tetap menggunakan semua latihan yang dipilih
                 break;
         }
-
-        // Filter berdasarkan waktu latihan
         switch ($data['waktu_latihan']) {
             case 'singkat':
                 $selectedExercises = array_slice($selectedExercises, 0, 2);
                 break;
-
             case 'sedang':
                 $selectedExercises = array_slice($selectedExercises, 0, 4);
                 break;
-
             case 'panjang':
-                // Tetap menggunakan semua latihan yang dipilih
                 break;
         }
 
@@ -127,9 +103,6 @@ class ExerciseRecommendationController extends Controller
         // Pastikan tidak ada duplikat
         $selectedExercises = array_unique($selectedExercises);
 
-        return response()->json([
-            'success' => true,
-            'rekomendasi' => $selectedExercises
-        ]);
+        return redirect()->route('index')->with('selectedExercises', $selectedExercises);
     }
 }
