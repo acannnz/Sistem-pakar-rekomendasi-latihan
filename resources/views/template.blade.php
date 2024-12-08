@@ -38,11 +38,11 @@
                             <a href="#team" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Team</a>
                         </li>
                         <li class="">
-                            <button class="inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:text-white dark:focus:ring-cyan-800">
+                            <a href="{{ url('index') }}" class="inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:text-white dark:focus:ring-cyan-800">
                                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                     Cek Latihan
                                 </span>
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -168,8 +168,9 @@
     <footer class="bg-white dark:bg-gray-950">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MCPE</span>
+                <div href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="{{asset('image')}}/logo.png" class="h-14 w-1h-14" alt="Logo" />
+                    <span class="self-center text-2xl whitespace-nowrap font-punch dark:text-yellow-100">OTW SAITAMA</span>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
