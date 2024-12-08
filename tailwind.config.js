@@ -33,10 +33,35 @@ export default {
                     '0%, 100%': { transform: 'translateY(0)' }, // Posisi awal dan akhir tetap
                     '50%': { transform: 'translateY(-15px)' }, // Mantul sedikit ke atas
                 },
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' }
+                },
+                fadeOut: {
+                    '0%': { opacity: '1' },
+                    '100%': { opacity: '0' }
+                },
+                scaleIn: {
+                    '0%': { opacity: '0', transform: 'scale(0.95)' },
+                    '100%': { opacity: '1', transform: 'scale(1)' }
+                },
+                pulse: {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' },
+                },
+                loading: {
+                    '0%': { width: '0%' },
+                    '100%': { width: '100%' },
+                },
             },
             animation: {
                 typing: 'typing 4s steps(30, end) infinite, cursor 0.7s step-end infinite alternate, phraseRotation 8s linear infinite',
                 mantul: 'smallBounce 3s ease-in-out infinite',
+                'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'fade-in': 'fadeIn 0.3s ease-out',
+                'fade-out': 'fadeOut 0.3s ease-in',
+                'scale-in': 'scaleIn 0.3s ease-out',
+                'loading-bar': 'loading 3s ease-in-out forwards',
                 },
 
             colors: {

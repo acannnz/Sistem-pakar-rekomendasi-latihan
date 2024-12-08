@@ -13,16 +13,21 @@
 
 <body>
     <section class="bg-gray-50 dark:bg-gray-900">
+        <a href="{{ url('/') }}" class="flex p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-6">
+                <path fill-rule="evenodd" d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-white"> Kembali </span>
+        </a>
+
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                <img class="w-8 h-8 mr-2" src="" alt="logo">
-                Lorem, ipsum dolor.
+            <a href="#" class="flex items-center mb-6 text-gray-900 dark:text-white">
+                <img class="w-14 h-14" src="{{asset('image')}}/logo.png" alt="logo">
+                <span class="self-center text-3xl whitespace-nowrap font-punch dark:text-yellow-100">OTW SAITAMA</span>
             </a>
             <div class="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
-                <h1 class="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                    Lorem ipsum
-                </h1>
-                <p class="font-light text-gray-500 dark:text-gray-400 mb-10">Don't fret! Just type in your email and we will send you a code to reset your password!</p>
+                <p class="font-light text-gray-500 dark:text-gray-400 mb-10">Ayo periksa rekomendasi latihan rumahan yang cocok untuk kamu. Kamu akan diminta menginput beberapa data diri!</p>
                 <form class="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
                     <div class="flex items-center justify-center">
                         <span class="inline-block w-36 max-h-full animate-bounce rounded-full bg-gray-800 border-2 text-white text-center text-sm ">Klik Disini
@@ -37,6 +42,7 @@
             </div>
         </div>
     </section>
+    @yield('output')
 </body>
 
 </html>
