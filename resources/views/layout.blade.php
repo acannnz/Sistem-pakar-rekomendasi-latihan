@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>My Website</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://db.onlinewebfonts.com/c/32416a86c048d1723d84ab514fc50a1c?family=Punch" rel="stylesheet" type="text/css" />

@@ -26,7 +26,7 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                <form id="recommendationForm" method="post">
+                <form id="recommendationForm" method="post" action="{{ route('recommendation.submit') }}">
                     @csrf
                     <div class="grid gap-4 mb-4 sm:grid-cols-2">
                         <div>
@@ -87,28 +87,15 @@
     <section id="outputSection" class="output-section">
         <div class="max-w-screen-2xl h-auto px-4 py-8 antialiased dark:bg-slate-950 md:py-16">
             <h1 class="text-white text-3xl flex items-center justify-center font-bold md:text-3xl xl:text-4xl py-10">Rekomendasi Latihan</h1>
-
-
-            <div class="flex flex-col items-center justify-center mt-10 space-y-6">
-                @if (session('selectedExercises'))
-                @foreach (session('selectedExercises') as $exercise)
+            <div class="flex flex-col items-center justify-center mt-10 space-y-6" id="exerciseContainer">
                 <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700  w-full md:w-[600px]">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg transition-transform duration-700 ease-in-out transform md:hover:scale-[2.2] sm:hover:scale-105" src="" alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $exercise }}</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Deskripsi tentang latihan {{ $exercise }}.</p>
-                    </div>
                 </div>
-                @endforeach
-                @else
                 <p class="mb-6 text-gray-500 dark:text-gray-400">Mohon Data di input Terlebih Dahulu</p>
-                @endif
             </div>
-
-
         </div>
     </section>
     @endsection
+
     <script>
         document.addEventListener(" DOMContentLoaded", function(event) {
             // Otomatis membuka modal ketika halaman dimuat
@@ -137,14 +124,97 @@
         });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('recommendationForm');
+            const exerciseContainer = document.getElementById('exerciseContainer');
+            const modal = document.getElementById('modal-input');
+
+            if (!exerciseContainer) {
+                console.error('Elemen dengan ID "exerciseContainer" tidak ditemukan.');
+                return;
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Mencegah pengiriman form secara default
+
+                // Mengambil data form
+                const formData = new FormData(form);
+
+                // Mengirim data menggunakan Fetch API
+                fetch('{{ route("recommendation.submit") }}', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}' // Sertakan token CSRF
+                        }
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Respon jaringan tidak oke');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Mengosongkan kontainer latihan
+                        exerciseContainer.innerHTML = '';
+
+                        // Memeriksa apakah ada latihan dalam respons
+                        if (data.selectedExercises && data.selectedExercises.length > 0) {
+                            data.selectedExercises.forEach(exercise => {
+                                exerciseContainer.innerHTML += `
+                                <div class="flex flex-col items-center justify-center mt-10 space-y-6">
+                                    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 w-full md:w-[600px]">
+                                        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg transition-transform duration-700 ease-in-out transform md:hover:scale-[2.2] sm:hover:scale-105" src="" alt="">
+                                        <div class="flex flex-col justify-between p-4 leading-normal">
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${exercise}</h5>
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Deskripsi tentang latihan ${exercise}.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            });
+                        } else {
+                            exerciseContainer.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Tidak ada latihan yang direkomendasikan.</p>';
+                        }
+
+                        // Menampilkan alert sukses
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Berhasil!',
+                            text: 'Rekomendasi latihan berhasil dihasilkan.',
+                            confirmButtonText: 'OK'
+                        }).then(() => {
+                            // Menutup modal
+                            const modalToggleButton = document.querySelector('[data-modal-toggle="modal-input"]');
+                            if (modalToggleButton) {
+                                modalToggleButton.click();
+                            }
+
+                            // Menggulir ke bagian output dengan halus
+                            setTimeout(() => {
+                                // Menggulir ke bagian output dengan halus
+                                document.getElementById('outputSection').scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }, 300);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Gagal!',
+                            text: 'Terjadi kesalahan saat memproses data.',
+                            confirmButtonText: 'OK'
+                        });
+                    });
+            });
+        });
+    </script>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    <!-- @if (session('selectedExercises'))
-                <ul>
-                    @foreach (session('selectedExercises') as $exercise)
-                    <li class="mb-6 text-gray-500 dark:text-gray-400">{{ $exercise }}</li>
-                    @endforeach
-                </ul>
-                @else
-                <p class="mb-6 text-gray-500 dark:text-gray-400">Tidak ada rekomendasi latihan.</p>
-                @endif -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

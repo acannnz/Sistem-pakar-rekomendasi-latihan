@@ -10,7 +10,7 @@ class ExerciseRecommendationController extends Controller
     public function index()
     {
         $selectedExercises = [];
-        return view('index', compact('selectedExercises'));
+        return view('index')->with('selectedExercises', $selectedExercises);
     }
 
     public function submitRecommendation(Request $request)
@@ -29,9 +29,9 @@ class ExerciseRecommendationController extends Controller
         switch ($data['tujuan_latihan']) {
             case 'massaOtot':
                 $selectedExercises = [
-                    'push up',
-                    'squad',
-                    'tricep dips',
+                    'Push Up',
+                    'Squad',
+                    'Tricep Dips',
                     'Diamond Push-ups',
                     'Superman Exercise'
                 ];
@@ -49,9 +49,10 @@ class ExerciseRecommendationController extends Controller
 
             case 'ototBeratBadan':
                 $selectedExercises = [
-                    'push up',
+                    'Push Up',
                     'Mountain Climbers',
-                    'squad',
+                    'Squad',
+                    'Tricep Dips',
                     'Russian Twist',
                     'Burpees'
                 ];
@@ -103,6 +104,8 @@ class ExerciseRecommendationController extends Controller
         // Pastikan tidak ada duplikat
         $selectedExercises = array_unique($selectedExercises);
 
-        return redirect()->route('index')->with('selectedExercises', $selectedExercises);
+        return response()->json([
+            'selectedExercises' => $selectedExercises
+        ]);
     }
 }
