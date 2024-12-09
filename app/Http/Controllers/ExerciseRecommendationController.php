@@ -22,10 +22,13 @@ class ExerciseRecommendationController extends Controller
             'jenis_kelamin' => 'required',
             'waktu_latihan' => 'required'
         ]);
-        $latihan = Latihan::all()->pluck('jenis')->toArray();
+
+        // Ambil semua latihan yang ada di database
+        $latihan = Latihan::all(['jenis', 'deskripsi', 'gambar']);
 
         $selectedExercises = [];
 
+        // Tentukan latihan berdasarkan tujuan latihan
         switch ($data['tujuan_latihan']) {
             case 'massaOtot':
                 $selectedExercises = [
@@ -59,7 +62,8 @@ class ExerciseRecommendationController extends Controller
                 break;
 
             default:
-                $selectedExercises = $latihan;
+                // Jika tidak ada tujuan yang sesuai, ambil semua latihan
+                $selectedExercises = $latihan->pluck('jenis')->toArray();
         }
 
         $umur = intval($data['umur']);
@@ -85,6 +89,7 @@ class ExerciseRecommendationController extends Controller
             case 'baikKebugaran':
                 break;
         }
+
         switch ($data['waktu_latihan']) {
             case 'singkat':
                 $selectedExercises = array_slice($selectedExercises, 0, 2);
@@ -104,8 +109,13 @@ class ExerciseRecommendationController extends Controller
         // Pastikan tidak ada duplikat
         $selectedExercises = array_unique($selectedExercises);
 
+        // Ambil data latihan yang dipilih dari database
+        $exercises = Latihan::whereIn('jenis', $selectedExercises)
+            ->select('jenis', 'deskripsi', 'gambar')
+            ->get();
+        // Mengembalikan data latihan yang sudah difilter, termasuk gambar dan deskripsi
         return response()->json([
-            'selectedExercises' => $selectedExercises
+            'selectedExercises' => $exercises
         ]);
     }
 }

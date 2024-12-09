@@ -165,14 +165,14 @@
                                 exerciseContainer.innerHTML += `
                                 <div class="flex flex-col items-center justify-center mt-10 space-y-6">
                                     <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 w-full md:w-[600px]">
-                                        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg transition-transform duration-700 ease-in-out transform md:hover:scale-[2.2] sm:hover:scale-105" src="" alt="">
+                                        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg transition-transform duration-700 ease-in-out transform md:hover:scale-[2.2] sm:hover:scale-105 hover:z-10" src="${exercise.gambar}" alt="${exercise.jenis}">
                                         <div class="flex flex-col justify-between p-4 leading-normal">
-                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${exercise}</h5>
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Deskripsi tentang latihan ${exercise}.</p>
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${exercise.jenis}</h5>
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${exercise.deskripsi}</p>
                                         </div>
                                     </div>
                                 </div>
-                            `;
+                                `;
                             });
                         } else {
                             exerciseContainer.innerHTML = '<p class="text-gray-500 dark:text-gray-400">Tidak ada latihan yang direkomendasikan.</p>';
