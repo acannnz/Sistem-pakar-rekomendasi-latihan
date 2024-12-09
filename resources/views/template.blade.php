@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://db.onlinewebfonts.com/c/32416a86c048d1723d84ab514fc50a1c?family=Punch" rel="stylesheet" type="text/css" />
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -52,22 +53,27 @@
     <!-- end Navbar -->
 
     <!-- HErO -->
-    <section id="hero" class="bg-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl h-[700px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+    <section id="hero" class="relative h-[700px] w-full bg-gray-900">
+        <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div class="grid max-w-screen-xl h-full px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 relative z-10">
             <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-[370px] mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden whitespace-nowrap border-r-4 border-black animate-typing">
+                <h1 class="max-w-[230px] xl:max-w-[370px] md:max-w-[300px] sm:max-w-[230px] mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white overflow-hidden whitespace-nowrap border-r-4 border-white animate-typing">
                     Sistem Pakar
                 </h1>
-                <span class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl bg-gradient-to-r from-blue-500 via-blue-300 to-blue-700 text-transparent bg-clip-text bg-size-200">Rekomendasi Latihan Pemula</span>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"> Sistem ini mengumpulkan informasi tentang kondisi fisik pengguna, tujuan kebugaran, dan preferensi latihan mereka, kemudian memberikan saran latihan yang mudah diikuti, efektif, dan aman. </p>
-                <a href="{{ url('index') }}" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                <span class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl bg-gradient-to-r from-blue-500 via-blue-300 to-blue-700 text-transparent bg-clip-text bg-size-200">
+                    Rekomendasi Latihan Pemula
+                </span>
+                <p class="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+                    Sistem ini mengumpulkan informasi tentang kondisi fisik pengguna, tujuan kebugaran, dan preferensi latihan mereka, kemudian memberikan saran latihan yang mudah diikuti, efektif, dan aman.
+                </p>
+                <a href="{{ url('index') }}" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300">
                     Ayo Mulai
                     <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </a>
             </div>
-            <div class="w-[400px] h-[400px] ml-28 lg:mt-0 lg:col-span-5">
+            <div class="hidden lg:block lg:col-span-5 lg:mt-0">
                 <img class="drop-shadow-kuning rounded-lg animate-mantul" src="{{ asset('image') }}/saitama.png" alt="banner">
             </div>
         </div>
@@ -75,14 +81,17 @@
     <!-- END HEro -->
 
     <!-- About Section -->
-    <section id="about" class="bg-white dark:bg-gray-950">
+    <section id="about" class="bg-white dark:bg-gray-950 relative h-full w-full">
+        <div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(9,19,245,0.38),rgba(255,255,255,0))]"></div>
+        <div class="absolute right-0 bottom-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(9,19,245,0.38),rgba(255,255,255,0))]"></div>
+        </div>
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-10">
-            <div class="max-w-screen-md mb-8 lg:mb-16">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000" class="max-w-screen-md mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Manfaat & Aspek Penting</h2>
                 <p class="text-gray-500 sm:text-xl dark:text-gray-400">Sistem Pakar Rekomendasi Latihan Pemula menawarkan berbagai manfaat penting yang membantu pemula memulai perjalanan kebugaran mereka dengan aman dan efektif.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="800" class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
@@ -91,7 +100,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Tujuan Utama</h3>
                     <p class="text-gray-500 dark:text-gray-400"> Sistem Pakar Rekomendasi Latihan Pemula dirancang untuk membantu pemula memulai perjalanan kebugaran dengan latihan yang aman dan efektif, disesuaikan dengan kebutuhan individu.</p>
                 </div>
-                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="1200" class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
@@ -100,7 +109,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Personalisasi Latihan</h3>
                     <p class="text-gray-500 dark:text-gray-400">Sistem ini menganalisis data pengguna untuk memberikan rekomendasi latihan yang disesuaikan berdasarkan usia, kondisi fisik, dan tujuan kebugaran, memastikan hasil yang optimal.</p>
                 </div>
-                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="1800" class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" clip-rule="evenodd"></path>
@@ -109,7 +118,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Pendekatan Bertahap</h3>
                     <p class="text-gray-500 dark:text-gray-400">Latihan yang disarankan dimulai dengan tingkat dasar dan secara bertahap meningkat, memberikan progres yang aman dan terukur bagi pemula, serta mengurangi risiko cedera.</p>
                 </div>
-                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
+                <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="1800" class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"></path>
@@ -118,7 +127,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Aksesibilitas dan Kemudahan</h3>
                     <p class="text-gray-500 dark:text-gray-400">Sistem ini memberikan antarmuka yang ramah pengguna, memudahkan akses ke latihan yang dilengkapi dengan instruksi langkah demi langkah dan video tutorial yang memudahkan pemula.</p>
                 </div>
-                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
+                <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="1300" class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd"></path>
@@ -127,7 +136,7 @@
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Keamanan dan Efektivitas</h3>
                     <p class="text-gray-500 dark:text-gray-400">Sistem Pakar memastikan latihan yang disarankan sesuai dengan kemampuan fisik pemula, dengan fokus pada latihan yang aman, efektif, dan minim risiko cedera.</p>
                 </div>
-                <div class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
+                <div data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" class="hover:bg-gray-800 hover:rounded-md p-2 duration-300">
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg class="w-8 h-8 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clip-rule="evenodd" />
@@ -141,24 +150,26 @@
         </div>
     </section>
     <!-- end About -->
-
     <!-- Team -->
-    <section id="team" class="bg-white dark:bg-gray-900 ">
+    <section id="team" class="bg-white dark:bg-gray-900 relative h-full w-full">
+
+        <!-- <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div> -->
+
         <div class="flex justify-center items-center w-full h-full">
             <h1 class="text-white mt-7 font-bold text-5xl">Team</h1>
         </div>
         <div class="max-w-screen-xl h-[1100px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16">
             <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img class="w-full" src="{{ asset('image') }}/mark.jpeg" alt="dashboard image">
+                <img data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500" class="w-full" src="{{ asset('image') }}/mark.jpeg" alt="dashboard image">
                 <div class="mt-4 md:mt-0">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">I Putu Gede Candra Pratama</h2>
-                    <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique numquam voluptatem ullam odio velit, tempora expedita tempore, veritatis quo fuga commodi a explicabo debitis repellat voluptatum! Magnam harum sunt commodi!</p>
+                    <h2 data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">I Putu Gede Candra Pratama</h2>
+                    <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique numquam voluptatem ullam odio velit, tempora expedita tempore, veritatis quo fuga commodi a explicabo debitis repellat voluptatum! Magnam harum sunt commodi!</p>
                 </div>
                 <div class="mt-4 md:mt-0">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ida Bagus Putu Wisnu Mahendra</h2>
-                    <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis aut eos, minus ipsam, necessitatibus recusandae corrupti corporis quis cumque, eligendi quisquam quibusdam quam iusto laborum! Fugiat earum assumenda porro quas?</p>
+                    <h2 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ida Bagus Putu Wisnu Mahendra</h2>
+                    <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis aut eos, minus ipsam, necessitatibus recusandae corrupti corporis quis cumque, eligendi quisquam quibusdam quam iusto laborum! Fugiat earum assumenda porro quas?</p>
                 </div>
-                <img class="w-full" src="{{ asset('image') }}/elon.jpg" alt="dashboard image">
+                <img data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500" class="w-full" src="{{ asset('image') }}/elon.jpg" alt="dashboard image">
             </div>
         </div>
     </section>
@@ -249,6 +260,20 @@
     </footer>
 
     <!-- end footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+            const navbar = document.getElementById('navbar-default');
+
+            toggleButton.addEventListener('click', () => {
+                navbar.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 
