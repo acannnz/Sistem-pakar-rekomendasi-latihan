@@ -82,7 +82,6 @@ class ExerciseRecommendationController extends Controller
             case 'rendahKebugaran':
                 $selectedExercises = array_slice($selectedExercises, 0, 3);
                 break;
-
             case 'sedangKebugaran':
                 $selectedExercises = array_slice($selectedExercises, 0, 5);
                 break;

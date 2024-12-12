@@ -152,9 +152,6 @@
     <!-- end About -->
     <!-- Team -->
     <section id="team" class="bg-white dark:bg-gray-900 relative h-full w-full">
-
-        <!-- <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div> -->
-
         <div class="flex justify-center items-center w-full h-full">
             <h1 class="text-white mt-7 font-bold text-5xl">Team</h1>
         </div>
