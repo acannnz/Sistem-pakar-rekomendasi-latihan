@@ -153,7 +153,7 @@
     <!-- Team -->
     <section id="team" class="bg-white dark:bg-gray-900 relative h-full w-full">
         <div class="flex justify-center items-center w-full h-full">
-            <h1 class="text-white mt-7 font-bold text-5xl">Team</h1>
+            <h1 data-aos="fade-up" data-aos-offset="100" data-aos-duration="2000" class="text-white mt-7 font-bold text-5xl">Team</h1>
         </div>
         <div class="max-w-screen-xl h-[1100px] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16">
             <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
