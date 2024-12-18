@@ -34,13 +34,8 @@
                             <input type="number" name="umur" id="umur" min="10" max="80" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Umur" required="">
                         </div>
                         <div>
-                            <label for="tingkat_kebugaran" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tingkat Kebugaran</label>
-                            <select name="tingkat_kebugaran" id="tingkat_kebugaran" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Pilih Tingkat Kebugaran</option>
-                                <option value="rendahKebugaran">Rendah</option>
-                                <option value="sedangKebugaran">Sedang</option>
-                                <option value="baikKebugaran">Baik</option>
-                            </select>
+                            <label for="berat_badan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Berat Badan</label>
+                            <input type="number" name="berat_badan" id="berat_badan" min="30" max="100" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Berat Badan" required="">
                         </div>
                         <div>
                             <label for="tujuan_latihan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tujuan Latihan</label>
@@ -167,7 +162,8 @@
                                     <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 w-full md:w-[600px]">
                                         <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg transition-transform duration-700 ease-in-out transform md:hover:scale-[2.2] sm:hover:scale-105 hover:z-10" src="${exercise.gambar}" alt="${exercise.jenis}">
                                         <div class="flex flex-col justify-between p-4 leading-normal">
-                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${exercise.jenis}</h5>
+                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${exercise.jenis}</h5>
+                                        <p class="mb-2 text-xl tracking-tight text-gray-900 dark:text-white">${exercise.set}</p>
                                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${exercise.deskripsi}</p>
                                         </div>
                                     </div>

@@ -17,7 +17,7 @@ class ExerciseRecommendationController extends Controller
     {
         $data = $request->validate([
             'umur' => 'required|numeric|min:10|max:80',
-            'tingkat_kebugaran' => 'required',
+            'berat_badan' => 'required',
             'tujuan_latihan' => 'required',
             'jenis_kelamin' => 'required',
             'waktu_latihan' => 'required'
@@ -76,17 +76,13 @@ class ExerciseRecommendationController extends Controller
             $selectedExercises[] = 'Wall Sit';
             $selectedExercises[] = 'Bird Dog';
         }
-
-        // Filter berdasarkan tingkat kebugaran
-        switch ($data['tingkat_kebugaran']) {
-            case 'rendahKebugaran':
-                $selectedExercises = array_slice($selectedExercises, 0, 3);
-                break;
-            case 'sedangKebugaran':
-                $selectedExercises = array_slice($selectedExercises, 0, 5);
-                break;
-            case 'baikKebugaran':
-                break;
+        $berat = intval($data['berat_badan']);
+        if ($berat < 42) {
+            $selectedExercises =  array_slice($selectedExercises, 0, 3);
+        } elseif ($berat >= 42 && $berat <= 67) {
+            $selectedExercises = array_slice($selectedExercises, 0, 5);
+        } elseif ($berat > 67) {
+            $selectedExercises = array_slice($selectedExercises, 0, 7);
         }
 
         switch ($data['waktu_latihan']) {
@@ -110,7 +106,7 @@ class ExerciseRecommendationController extends Controller
 
         // Ambil data latihan yang dipilih dari database
         $exercises = Latihan::whereIn('jenis', $selectedExercises)
-            ->select('jenis', 'deskripsi', 'gambar')
+            ->select('jenis', 'deskripsi', 'gambar', 'set')
             ->get();
         // Mengembalikan data latihan yang sudah difilter, termasuk gambar dan deskripsi
         return response()->json([
