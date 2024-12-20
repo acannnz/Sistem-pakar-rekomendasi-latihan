@@ -80,7 +80,7 @@
     @section('output')
     <!-- output section -->
     <section id="outputSection" class="output-section">
-        <div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(9,19,245,0.38),rgba(255,255,255,0))]"></div>
+        <div class="absolute left-[-20%] right-0 bottom-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(9,19,245,0.38),rgba(255,255,255,0))]"></div>
         <div class="absolute right-0 bottom-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(9,19,245,0.38),rgba(255,255,255,0))]"></div>
         <div class="max-w-screen-2xl h-auto px-4 py-8 antialiased dark:bg-slate-950 md:py-16">
             <h1 class="text-white text-3xl flex items-center justify-center font-bold md:text-3xl xl:text-4xl py-10">Rekomendasi Latihan</h1>
