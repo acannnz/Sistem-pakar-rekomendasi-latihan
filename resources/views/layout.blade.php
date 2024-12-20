@@ -22,13 +22,13 @@
             <span class="text-white"> Kembali </span>
         </a>
 
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="relative flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <a href="#" class="flex items-center mb-6 text-gray-900 dark:text-white">
                 <img class="w-14 h-14" src="{{asset('image')}}/logo.png" alt="logo">
                 <span class="self-center text-3xl whitespace-nowrap font-punch dark:text-yellow-100">OTW SAITAMA</span>
             </a>
-            <div class="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
-                <p class="font-light text-gray-500 dark:text-gray-400 mb-10">Ayo periksa rekomendasi latihan rumahan yang cocok untuk kamu. Kamu akan diminta menginput beberapa data diri!</p>
+            <div class=" p-6 bg-white after:w-[97%] after:h-[97%] rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+                <p class=" font-light text-gray-500 dark:text-gray-400 mb-10">Ayo periksa rekomendasi latihan rumahan yang cocok untuk kamu. Kamu akan diminta menginput beberapa data diri!</p>
                 <form class="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
                     <div class="flex items-center justify-center">
                         <span class="inline-block w-36 max-h-full animate-bounce rounded-full bg-gray-800 border-2 text-white text-center text-sm ">Klik Disini

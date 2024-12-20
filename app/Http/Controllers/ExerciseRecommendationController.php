@@ -28,7 +28,6 @@ class ExerciseRecommendationController extends Controller
 
         $selectedExercises = [];
 
-        // Tentukan latihan berdasarkan tujuan latihan
         switch ($data['tujuan_latihan']) {
             case 'massaOtot':
                 $selectedExercises = [
@@ -62,7 +61,6 @@ class ExerciseRecommendationController extends Controller
                 break;
 
             default:
-                // Jika tidak ada tujuan yang sesuai, ambil semua latihan
                 $selectedExercises = $latihan->pluck('jenis')->toArray();
         }
 
