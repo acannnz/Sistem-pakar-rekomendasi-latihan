@@ -160,11 +160,11 @@
                 <img data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500" class="w-full" src="{{ asset('image') }}/mark.jpeg" alt="dashboard image">
                 <div class="mt-4 md:mt-0">
                     <h2 data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">I Putu Gede Candra Pratama</h2>
-                    <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique numquam voluptatem ullam odio velit, tempora expedita tempore, veritatis quo fuga commodi a explicabo debitis repellat voluptatum! Magnam harum sunt commodi!</p>
+                    <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">2155201008 FullStack</p>
                 </div>
                 <div class="mt-4 md:mt-0">
                     <h2 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ida Bagus Putu Wisnu Mahendra</h2>
-                    <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis aut eos, minus ipsam, necessitatibus recusandae corrupti corporis quis cumque, eligendi quisquam quibusdam quam iusto laborum! Fugiat earum assumenda porro quas?</p>
+                    <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">2155201021 Front-End</p>
                 </div>
                 <img data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500" class="w-full" src="{{ asset('image') }}/elon.jpg" alt="dashboard image">
             </div>
