@@ -164,7 +164,7 @@
                 </div>
                 <div class="mt-4 md:mt-0">
                     <h2 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ida Bagus Putu Wisnu Mahendra</h2>
-                    <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">2155201021 Front-End</p>
+                    <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500" class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">2155201021 AFK</p>
                 </div>
                 <img data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500" class="w-full" src="{{ asset('image') }}/elon.jpg" alt="dashboard image">
             </div>
